@@ -24,5 +24,5 @@ with open("./Input/Letters/starting_letter.txt") as letter:
     for one_person in names:
         strip_one_person = one_person.strip()
         new_letters = letters.replace(POSITION, strip_one_person)
-
-        print(new_letters)
+        with open(f"./Output/ReadyToSend/letter__{strip_one_person}", mode='w') as new_ready_letter:
+            x = new_ready_letter.write(new_letters)
